@@ -23,19 +23,18 @@ def count(parameter):
 def math(num1, operation, num2):
     num1 = int(num1)
     num2 = int(num2)
-    match operation:
-        case '+':
-            return str(num1 + num2)
-        case '-':
-            return str(num1 - num2)
-        case '*':
-            return str(num1 * num2)
-        case 'div':
-            return str(num1 / num2)
-        case '%':
-            return str(num1 % num2)
-        case _:
-            return "error"
+    if operation == '+':
+        return str(num1 + num2)
+    elif operation == '-':
+        return str(num1 - num2)
+    elif operation == '*':
+        return str(num1 * num2)
+    elif operation == 'div':
+        return str(num1 / num2)
+    elif operation == '%':
+        return str(num1 % num2)
+    else:
+        return "error"
 
 if __name__ == '__main__':
     app.run(port=5555, debug=True)
